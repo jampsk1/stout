@@ -20,7 +20,6 @@
 
 
 
-
 ## Ссылки
 - [Stout House](http://maximkakdela.pythonanywhere.com/) (admin/pass)
 - [Miro](https://miro.com/app/board/uXjVPVBlgms=/)
