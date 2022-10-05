@@ -1,1 +1,54 @@
-<html> </html>
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Сайт доставки еды</title>
+{% endblock %}
+
+{% block body %}
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Доставка еды 🔥 </h1>
+        <p class="lead"></p>
+    </div>
+
+    <div class="container">
+        <select onchange="location = this.value;">
+            <option selected="selected">Отсортировать по цене</option>
+            <option value="/sort=asc">Цена по возрастанию</option>
+            <option value="/sort=desc">Цена по убыванию</option>
+        </select><br><br>
+
+
+        <input type="button" onclick="location.href='/';" value="Все товары ♾"/>
+        <input type="button" onclick="location.href='/category=1';" value="Бургеры 🍔"/>
+        <input type="button" onclick="location.href='/category=2';" value="Пицца 🍕"/>
+        <input type="button" onclick="location.href='/category=3';" value="Закуски 🍟"/>
+        <input type="button" onclick="location.href='/category=4';" value="Салаты 🥗"/>
+        <input type="button" onclick="location.href='/category=5';" value="Напитки 🥤"/>
+        <input type="button" onclick="location.href='/category=6';" value="Десерты 🍨"/>
+
+
+        <br><br>
+
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+
+                {% for el in data %}
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">{{ el.title }}</h4>
+                        <p>{{ el.definition }}</p>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">{{ el.price }} <small
+                                class="text-muted">рублей</small></h1>
+
+                        <a {% if request.cookies.get('user') %} href="/addItem/{{ el.id }}"
+                                                                class="btn btn-lg btn-block btn-outline-primary">
+                            + {% endif %}</a>
+                    </div>
+                {% endfor %}
+                <br>
+            </div>
+
+
+        </div>
+{% endblock %}
