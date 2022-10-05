@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Отзывы</title>
+{% endblock %}
+
+{% block body %}
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Отзывы</h1>
+        <p class="lead"></p>
+    </div>
+
+    <div class="container">
+        {% if request.cookies.get('user') %}
+            <h4><a class="p-2 text-dark" href="/createFeedBack">Создать отзыв</a>{% endif %}</h4>
+        <div class="card-deck mb-3 text-center">
+            {% for el in feedbacks %}
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">{{ el.title }}</h4>
+                    </div>
+                    <div class="card-body">
+                        {#                        <h1 class="card-title pricing-card-title">{{ el.price }} <small#}
+                        {#                                class="text-muted">рублей</small></h1>#}
+                        <p>{{ el.feedBackText }}</p>
+                        {#                        <a {% if request.cookies.get('user') %} href="/addItem/{{ el.id }}"#}
+                        {#                                                                class="btn btn-lg btn-block btn-outline-primary">#}
+                        {#                            + {% endif %}</a>#}
+                    </div>
+                </div>
+                 <a {% if request.cookies.get('user') == 'admin' %} href="/deleteFeedBack/{{ el.id }}"
+                                                                class="btn btn-lg btn-block btn-outline-primary">
+                            - {% endif %}</a><br>
+            {% endfor %}
+        </div>
+{% endblock %}
