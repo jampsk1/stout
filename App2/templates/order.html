@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Онлайн магазин</title>
+{% endblock %}
+
+{% block body %}
+    {#<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">#}
+    {#  <h2 class="display-4">{% if request.cookies.get('user') %} Цена всех товаров: {{ sum }}</h2> <a href="/buy" class="btn btn-lg btn-block btn-outline-primary"> Купить всё</a>{% endif %}#}
+    {#  <p class="lead"></p>#}
+    {#</div>#}
+
+    <div class="container">
+        {% for order in orders %}
+            <div class="card-deck mb-3 text-center">
+            <h4 class="card-title pricing-card-title">Заказ от {{ order[0] }} <small class="text-muted"></small>
+            {% for el in order[1] %}
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">{{ el.title }}</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">{{ el.price }} <small
+                                class="text-muted">рублей</small>
+                        </h1>
+                        <p>{{ el.definition }}</p>>
+
+                        <a {% if request.cookies.get('user') %} href="/deleteItem/{{ el.id }}"
+                                                                class="btn btn-lg btn-block btn-outline-primary">
+                            - {% endif %}</a>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="card-deck mb-3 text-center">
+
+        {% endfor %}
+        </div>
+        </div>
+{% endblock %}
