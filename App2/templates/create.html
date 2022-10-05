@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Добавление товара</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Добавление товара</h1>
+        <form method="post">
+            <input type="text" class="form-control" name="title" id="title" placeholder="Введите название"><br>
+            <input type="number" class="form-control" name="price" id="price" placeholder="Введите цену"><br>
+            <input type="text" class="form-control" name="definition" id="definition"
+                   placeholder="Введите описание товара"><br>
+
+            <p><strong>Выбери категорию товара</strong></p>
+            <input name="category" list="category">
+            <datalist id="category">
+               {% for categor in categories %}
+                    <option value={{ categor.id }}>{{ categor.title }}</option>
+                {% endfor %}
+            </datalist>
+            <button class="btn btn-success" type="submit">Добавить товар</button>
+        </form>
+    </div>
+{% endblock %}
