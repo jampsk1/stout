@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Добавление товара</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Создание отзыва</h1>
+        <form method="post">
+            <input type="text" class="form-control" name="title" id="title"
+                   placeholder="Введите титульное название"><br>
+            <input type="text" class="form-control" name="allText" id="price"
+                   placeholder="Напишите подробый отзыв о нашем магазине"><br>
+            <button class="btn btn-success" type="submit">Добавить отзыв</button>
+        </form>
+    </div>
+{% endblock %}
