@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Авторизация</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Авторизация</h1>
+    <form method="post">
+        <input type="text" class="form-control" name="login" id="login" placeholder="Введите логин"><br>
+        <input type="password" class="form-control" name="password" id="password" placeholder="Введите пароль"><br>
+        <button class="btn btn-success" type="submit">Войти</button>
+    </form>
+    <p class="lead">{{ mes }}</p>
+</div>
+{% endblock %}
