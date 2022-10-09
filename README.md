@@ -24,6 +24,7 @@
 - [Stout House](http://maximkakdela.pythonanywhere.com/) (admin/pass)
 - [Miro](https://miro.com/app/board/uXjVPVBlgms=/)
 - [Яндекс.трекер](https://tracker.yandex.ru/ORG/order:updated:true/filter?resolution=empty())
+- [Яндекс Метрика](https://metrika.yandex.ru/dashboard?id=90714293)
 - [Техническое задание](https://github.com/jampsk1/stout/blob/core/docs/Техническое%20задание.pdf)
 - [Курсовая](https://github.com/jampsk1/stout/blob/core/docs/Курсовая%20работа.pdf)
 - [Презентация](https://github.com/jampsk1/stout/blob/core/docs/Презентация%20Stout%20.pdf)
