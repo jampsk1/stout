@@ -30,3 +30,4 @@
 - [Презентация](https://github.com/jampsk1/stout/blob/core/docs/Презентация%20Stout%20.pdf)
 - [Видео демонстрация](https://youtu.be/CNdhVCEfd1M)
 - [Подробная демонстрация работы back части](https://youtu.be/rKOp_DZn7Hg)
+= [Демонстрация работы Back части](https://youtu.be/mmZJk7iDSqM) 
