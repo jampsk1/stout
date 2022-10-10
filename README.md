@@ -29,3 +29,4 @@
 - [Курсовая](https://github.com/jampsk1/stout/blob/core/docs/Курсовая%20работа.pdf)
 - [Презентация](https://github.com/jampsk1/stout/blob/core/docs/Презентация%20Stout%20.pdf)
 - [Видео демонстрация](https://youtu.be/CNdhVCEfd1M)
+- [Демострация работы Back части](https://youtu.be/rKOp_DZn7Hg)
