@@ -31,4 +31,4 @@
 - [Видео демонстрация](https://youtu.be/CNdhVCEfd1M)
 - [Подробная демонстрация работы back части](https://youtu.be/rKOp_DZn7Hg)
 - [Демонстрация работы Back части](https://youtu.be/mmZJk7iDSqM) 
-- [Swagger](https://app.swaggerhub.com/apis/ELITEJAMPSKI/stouthouse/1.0.0#/)
+- [Swagger](https://app.swaggerhub.com/apis/StoutHouseApi/stouthouse2/1.0.0#/)
